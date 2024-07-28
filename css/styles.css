@@ -686,3 +686,11 @@ input[type='checkbox']:checked
 .modal-btn {
 }
 /* #endregion Modal window */
+/* #region Media queries */
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(var(--hero-bg-cl), var(--hero-bg-cl)),
+      url(../images/hero/image-1@2x.jpg);
+  }
+}
+/* #endregion Media queries */
