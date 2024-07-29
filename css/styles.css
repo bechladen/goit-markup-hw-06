@@ -228,24 +228,22 @@ img {
   color: var(--text-cl);
 }
 .logo {
-  color: var(--NAVY-BLUE, #2e2f42);
-  font-family: Raleway;
+  color: var(--primary-brand-cl);
+  font-optical-sizing: auto;
+  font-family: var(--secondary-font);
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 21px; /* 116.667% */
-  letter-spacing: 0.54px;
-  text-transform: uppercase;
-
-  font-family: var(--secondary-font);
-  font-optical-sizing: auto;
-  color: var(--primary-brand-cl);
-  font-size: 18px;
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   display: inline-block;
+  padding: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .logo {
+    padding: 0;
+  }
 }
 /* Socials */
 .socials {
@@ -313,6 +311,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
 }
 .nav-list {
   font-weight: 500;
