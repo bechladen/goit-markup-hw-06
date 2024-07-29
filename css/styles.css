@@ -318,7 +318,7 @@ img {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .menu-btn {
     display: none;
   }
@@ -328,7 +328,7 @@ img {
   display: flex;
   gap: 40px;
 }
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .nav-list {
     display: none;
   }
@@ -348,16 +348,24 @@ img {
 .nav-link:focus {
   color: var(--pressed-state-cl);
 }
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .address {
     display: none;
   }
 }
 .address-list {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 12px;
   height: 100%;
   align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 1440px) {
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 .address-link {
   color: currentColor;
@@ -395,7 +403,7 @@ img {
   background-position: center;
   background-size: cover;
 }
-@media (min-resolution: 192dpi) {
+@media only screen and (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(var(--hero-bg-cl), var(--hero-bg-cl)),
       url(../images/hero/image-1@2x.jpg);
