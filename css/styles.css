@@ -228,6 +228,15 @@ img {
   color: var(--text-cl);
 }
 .logo {
+  color: var(--NAVY-BLUE, #2e2f42);
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px; /* 116.667% */
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+
   font-family: var(--secondary-font);
   font-optical-sizing: auto;
   color: var(--primary-brand-cl);
@@ -269,8 +278,15 @@ img {
 }
 /* #endregion Common-Styles */
 /* #region Header */
-.logo-header {
-  margin-right: 76px;
+@media only screen and (min-width: 768px) {
+  .logo-header {
+    margin-right: 120px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .logo-header {
+    margin-right: 76px;
+  }
 }
 .header {
   border-bottom: 1px solid var(--accent-cl);
@@ -289,10 +305,24 @@ img {
   margin-right: auto;
   align-items: center;
 }
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .nav-list {
   font-weight: 500;
   display: flex;
   gap: 40px;
+}
+@media (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
 }
 .nav-link {
   position: relative;
@@ -308,6 +338,11 @@ img {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--pressed-state-cl);
+}
+@media (max-width: 767px) {
+  .address {
+    display: none;
+  }
 }
 .address-list {
   display: flex;
@@ -476,6 +511,7 @@ img {
   overflow: hidden;
 }
 .portfolio-img {
+  height: 280px;
 }
 .overlay {
   position: absolute;
@@ -647,8 +683,8 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0;
-  background-color: var(--accent-cl);
   fill: var(--dark-cl);
+  background-color: var(--accent-cl);
   border: 1px solid rgba(0, 0, 0, 0.102);
   /* transition: var(--trns);
   transition-property: fill, background-color, border-color; */
