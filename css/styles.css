@@ -742,19 +742,24 @@ img {
   pointer-events: initial;
 }
 .modal {
-  width: 408px;
+  width: 288px;
   min-height: 584px;
   background-color: var(--modal-bg-cl);
   position: absolute;
-  top: 50%;
+  top: 80px;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   padding: 24px;
   padding-top: 72px;
   transition: transform var(--trns);
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
 }
 .modal-btn-close {
   position: absolute;
