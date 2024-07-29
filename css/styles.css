@@ -46,11 +46,17 @@ body {
   color: var(--text-cl);
   background-color: var(--white-bg-cl);
   min-width: 320px;
+  overflow-x: scroll;
 
   /* Default values */
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
+}
+@media only screen and (min-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 h1,
 h2,
@@ -120,7 +126,7 @@ img {
     padding: 112px 0;
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
   }
@@ -130,7 +136,7 @@ img {
 .portfolio {
   padding: 96px 0;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .benefits,
   .team,
   .portfolio {
@@ -152,7 +158,7 @@ img {
     max-width: 736px;
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding: 0 15px;
@@ -208,13 +214,18 @@ img {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
+  margin-bottom: 8px;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
+  .section-subtitle-benefits {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1158px) {
   .section-subtitle-benefits {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    text-align: left;
   }
 }
 .section-subtitle {
@@ -281,7 +292,7 @@ img {
     margin-right: 120px;
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .logo-header {
     margin-right: 76px;
   }
@@ -361,7 +372,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .address-list {
     flex-direction: row;
     gap: 40px;
@@ -430,7 +441,7 @@ img {
     width: 356px;
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .benefits-item {
     width: 264px;
   }
@@ -450,7 +461,7 @@ img {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .benefits-wrapper {
     display: flex;
   }
@@ -515,7 +526,7 @@ img {
     width: 356px;
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .portfolio-list {
     gap: 48px 24px;
   }
@@ -601,7 +612,7 @@ img {
     text-align: center;
   }
 }
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 1157px) {
   .footer-socials-text {
     margin-bottom: 16px;
   }
@@ -672,12 +683,12 @@ img {
     width: 264px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1439px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-text {
     width: 264px;
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1158px) {
   .footer {
     height: 312px;
     padding: 100px 0;
