@@ -173,6 +173,12 @@ img {
   color: var(--white-bg-cl);
   max-width: 496px;
   margin: 0 auto 48px;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 36px;
+    line-height: 1.11;
+    max-width: 216px;
+  }
 }
 .btn {
   line-height: 1.5;
@@ -406,18 +412,44 @@ img {
 .hero {
   background-color: var(--dark-cl);
   max-width: 1440px;
-  height: 600px;
   margin: 0 auto;
   background-image: linear-gradient(var(--hero-bg-cl), var(--hero-bg-cl)),
-    url(../images/hero/image-1.jpg);
+    url(../images/hero/img-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media only screen and (min-resolution: 192dpi) {
+    background-image: linear-gradient(var(--hero-bg-cl), var(--hero-bg-cl)),
+      url(../images/hero/img-mob@2x.jpg);
+  }
 }
-@media only screen and (min-resolution: 192dpi) {
+
+@media only screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(var(--hero-bg-cl), var(--hero-bg-cl)),
-      url(../images/hero/image-1@2x.jpg);
+      url(../images/hero/img-tab.jpg);
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(var(--hero-bg-cl), var(--hero-bg-cl)),
+      url(../images/hero/img-tab@2x.jpg);
+  }
+}
+
+@media only screen and (min-width: 1158 px) {
+  .hero {
+    background-image: linear-gradient(var(--hero-bg-cl), var(--hero-bg-cl)),
+      url(../images/hero/img-desk.jpg);
+  }
+}
+
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(var(--hero-bg-cl), var(--hero-bg-cl)),
+      url(../images/hero/img-desk@2x.jpg);
   }
 }
 /* #endregion Hero */
@@ -474,6 +506,7 @@ img {
 .team-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 72px;
 }
